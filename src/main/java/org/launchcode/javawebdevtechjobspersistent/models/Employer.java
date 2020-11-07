@@ -15,9 +15,9 @@ public class Employer extends AbstractEntity {
     @Size(max = 100)
     private String location;
 
-    @OneToMany (mappedBy = "employer")
+    @OneToMany
     @JoinColumn
-    private final List<Job> events = new ArrayList<>();
+    private final List<Job> jobs = new ArrayList<>();
 
     public Employer (@Size(max=100, message = "This field should not be left blank") String location) {
         this.location = location;
