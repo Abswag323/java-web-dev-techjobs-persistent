@@ -7,3 +7,7 @@ WHERE location = "St. Louis"
 DROP TABLE job
 
 ## Part 4: Test it with SQL
+SELECT skill.name, skill.description FROM job
+INNER JOIN job_skills ON job.id = job_skills.jobs_id
+INNER JOIN skill ON skill.id = job_skills.skills_id
+ORDER BY skill.name ASC
